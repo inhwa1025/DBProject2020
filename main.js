@@ -1,8 +1,8 @@
 var http = require('http');
 var url = require('url');
-var topic = require('./lib/topic');
-var author = require('./lib/author');
- 
+var reserve = require('./lib/reserve');
+
+
 var app = http.createServer(function(request,response){
     var _url = request.url;
     var queryData = url.parse(_url, true).query;
@@ -10,9 +10,9 @@ var app = http.createServer(function(request,response){
 
     if(pathname === '/'){
       if(queryData.id === undefined){
-        topic.home(request, response);
+        reserve.home(request, response);
       } else {
-        topic.page(request, response);
+        reserve.page(request, response);
       }
     } else {
       response.writeHead(404);
