@@ -1,51 +1,32 @@
 --
--- Table structure for table `designer`
+-- Table structure for table `employee`
 --
  
-CREATE TABLE `designer` (
+CREATE TABLE `employee` (
   `empid` int NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL,
   `title` varchar(20),
   `phone` varchar(20),
   `hiredate` date,
-  PRIMARY KEY (`empid`)
-);
- 
---
--- Dumping data for table `designer`
---
-/*
-INSERT INTO `designer` VALUES (14581,'ena','사장', '010-1234-5678', '2015-03-07');
-INSERT INTO `designer` VALUES (14582,'duru','실장', '010-9876-5432', '2015-05-18');
-INSERT INTO `designer` VALUES (14583,'taeho','사원', 010-6543-2198, '2018-08-09');
-INSERT INTO `designer` VALUES (14584,'dawn','사원', 010-6543-8198, '2018-11-04');
-*/
-
-
---
--- Table structure for table `step`
---
- 
-CREATE TABLE `step` (
-  `stepid` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(20) NOT NULL,
-  `phone` varchar(20),
-  `hiredate` date,
   `manager` int,
-  PRIMARY KEY (`stepid`),
-  FOREIGN KEY (`manager`) REFERENCES designer(empid)
+  PRIMARY KEY (`empid`),
+  FOREIGN KEY (`manager`) REFERENCES employee(empid)
 );
  
 --
--- Dumping data for table `step`
+-- Dumping data for table `employee`
 --
 /*
-INSERT INTO `step` VALUES (35681,'monica','010-3333-3333','2019-02-03',14583);
-INSERT INTO `step` VALUES (35682,'ross','010-2222-2222','2019-02-03',14582);
-INSERT INTO `step` VALUES (35683,'rachel','010-4444-4444','2019-05-08',14584);
-INSERT INTO `step` VALUES (35684,'joey','010-5555-5555','2019-10-25',14584);
-INSERT INTO `step` VALUES (35685,'pheobe','010-6666-6666','2020-04-08',14583);
-INSERT INTO `step` VALUES (35686,'chandler','010-8888-8888','2020-07-21',14582);
+INSERT INTO `employee` VALUES (14581,'ena','사장', '010-1234-5678', '2015-03-07', NULL);
+INSERT INTO `employee` VALUES (14582,'duru','실장', '010-9876-5432', '2015-05-18', NULL);
+INSERT INTO `employee` VALUES (14583,'taeho','디자이너', '010-6543-2198', '2018-08-09', NULL);
+INSERT INTO `employee` VALUES (14584,'dawn','디자이너', '010-6543-8198', '2018-11-04', NULL);
+INSERT INTO `employee` VALUES (14585,'monica','디자이너','010-3333-3333','2019-02-03',14583);
+INSERT INTO `employee` VALUES (14586,'ross','스텝','010-2222-2222','2019-02-03',14582);
+INSERT INTO `employee` VALUES (14587,'rachel','스텝','010-4444-4444','2019-05-08',14584);
+INSERT INTO `employee` VALUES (14588,'joey','스텝','010-5555-5555','2019-10-25',14584);
+INSERT INTO `employee` VALUES (14589,'pheobe','스텝','010-6666-6666','2020-04-08',14583);
+INSERT INTO `employee` VALUES (14590,'chandler','스텝','010-8888-8888','2020-07-21',14582);
 */
 
 
