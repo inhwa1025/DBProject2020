@@ -2,6 +2,7 @@ var http = require('http');
 var url = require('url');
 var reserve = require('./lib/reserve');
 var stock = require('./lib/stock');
+var purchase = require('./lib/purchase');
 
 
 var app = http.createServer(function(request,response){
@@ -38,6 +39,21 @@ var app = http.createServer(function(request,response){
     }
     else if(pathname === '/stock/delete_process'){
       stock.delete_process(request, response);
+    }
+    else if(pathname === '/purchase'){
+      purchase.home(request, response);
+    } 
+    else if(pathname === '/purchase/create_process'){
+      purchase.create_process(request, response);
+    }
+    else if(pathname === '/purchase/update'){
+      purchase.update(request, response);
+    }
+    else if(pathname === '/purchase/update_process'){
+      purchase.update_process(request, response);
+    }
+    else if(pathname === '/purchase/delete_process'){
+      purchase.delete_process(request, response);
     }
 
     else {
