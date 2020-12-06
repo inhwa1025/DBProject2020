@@ -4,6 +4,7 @@ var reserve = require('./lib/reserve');
 var stock = require('./lib/stock');
 var purchase = require('./lib/purchase');
 var customer = require('./lib/customer');
+var employee = require('./lib/employee');
 
 
 var app = http.createServer(function(request,response){
@@ -71,7 +72,21 @@ var app = http.createServer(function(request,response){
     else if(pathname === '/customer/delete_process'){
       customer.delete_process(request, response);
     }
-
+    else if(pathname === '/employee'){
+      employee.home(request, response);
+    } 
+    else if(pathname === '/employee/create_process'){
+      employee.create_process(request, response);
+    }
+    else if(pathname === '/employee/update'){
+      employee.update(request, response);
+    }
+    else if(pathname === '/employee/update_process'){
+      employee.update_process(request, response);
+    }
+    else if(pathname === '/employee/delete_process'){
+      employee.delete_process(request, response);
+    }
     else {
       response.writeHead(404);
       response.end('Not found');
