@@ -124,8 +124,8 @@ INSERT INTO `stock` VALUES (70003,'robe',NULL,16);
 CREATE TABLE `purchase` (
   `ordernum` int NOT NULL AUTO_INCREMENT,
   `orderdate` varchar(20) NOT NULL,
-  `store` varchar(20),
   `stockname` varchar(20) NOT NULL,
+  `store` varchar(20),
   `usedate` date,
   `quantity` int,
   PRIMARY KEY (`ordernum`)
@@ -134,7 +134,7 @@ CREATE TABLE `purchase` (
 -- Dumping data for table `purchase`
 --
 /*
-INSERT INTO `purchase` VALUES (80001,'2019-08-04','Cshop','robe',NULL,20);
-INSERT INTO `purchase` VALUES (80002,'2020-02-15','Ashop','sampoo','2021-08-26',40);
-INSERT INTO `purchase` VALUES (80003,'2020-03-07','Ashop','treatment','2021-09-07',40);
+INSERT INTO `purchase` VALUES (80001,'2019-08-04','robe','Cshop',NULL,20);
+INSERT INTO `purchase` VALUES (80002,'2020-02-15','sampoo','Ashop','2021-08-26',40);
+INSERT INTO `purchase` VALUES (80003,'2020-03-07','treatment','Ashop','2021-09-07',40);
 */
