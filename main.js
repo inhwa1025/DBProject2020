@@ -27,6 +27,19 @@ var app = http.createServer(function(request,response){
     else if(pathname === '/stock'){
       stock.home(request, response);
     } 
+    else if(pathname === '/stock/create_process'){
+      stock.create_process(request, response);
+    }
+    else if(pathname === '/stock/update'){
+      stock.update(request, response);
+    }
+    else if(pathname === '/stock/update_process'){
+      stock.update_process(request, response);
+    }
+    else if(pathname === '/stock/delete_process'){
+      stock.delete_process(request, response);
+    }
+
     else {
       response.writeHead(404);
       response.end('Not found');
