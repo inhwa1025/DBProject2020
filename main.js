@@ -12,16 +12,16 @@ var app = http.createServer(function(request,response){
       reserve.home(request, response);
     } 
     else if(pathname === '/create_process'){
-      topic.create_process(request, response);
+      reserve.create_process(request, response);
     } 
     else if(pathname === '/update'){
-      topic.update(request, response);
+      reserve.update(request, response);
     } 
     else if(pathname === '/update_process'){
-      topic.update_process(request, response);
+      reserve.update_process(request, response);
     } 
     else if(pathname === '/delete_process'){
-      topic.delete_process(request, response);
+      reserve.delete_process(request, response);
     } 
     else {
       response.writeHead(404);
