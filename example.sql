@@ -125,19 +125,16 @@ CREATE TABLE `purchase` (
   `ordernum` int NOT NULL AUTO_INCREMENT,
   `orderdate` varchar(20) NOT NULL,
   `store` varchar(20),
-  `stockid` int NOT NULL,
-  `useddate` date,
+  `stockname` varchar(20) NOT NULL,
+  `usedate` date,
   `quantity` int,
-  `buyer` int NOT NULL,
-  PRIMARY KEY (`ordernum`),
-  FOREIGN KEY (`stockid`) REFERENCES stock(stockid),
-  FOREIGN KEY (`buyer`) REFERENCES designer(empid)
+  PRIMARY KEY (`ordernum`)
 );
 --
 -- Dumping data for table `purchase`
 --
 /*
-INSERT INTO `purchase` VALUES (80001,'2019-08-04','Cshop',70003,NULL,20,14581);
-INSERT INTO `purchase` VALUES (80002,'2020-02-15','Ashop',70001,'2021-08-26',40,14583);
-INSERT INTO `purchase` VALUES (80003,'2020-03-07','Ashop',70002,'2021-09-07',40,14582);
+INSERT INTO `purchase` VALUES (80001,'2019-08-04','Cshop','robe',NULL,20);
+INSERT INTO `purchase` VALUES (80002,'2020-02-15','Ashop','sampoo','2021-08-26',40);
+INSERT INTO `purchase` VALUES (80003,'2020-03-07','Ashop','treatment','2021-09-07',40);
 */
