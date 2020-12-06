@@ -1,6 +1,7 @@
 var http = require('http');
 var url = require('url');
 var reserve = require('./lib/reserve');
+var stock = require('./lib/stock');
 
 
 var app = http.createServer(function(request,response){
@@ -22,6 +23,9 @@ var app = http.createServer(function(request,response){
     } 
     else if(pathname === '/delete_process'){
       reserve.delete_process(request, response);
+    } 
+    else if(pathname === '/stock'){
+      stock.home(request, response);
     } 
     else {
       response.writeHead(404);
