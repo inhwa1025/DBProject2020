@@ -1,14 +1,26 @@
-# HairShop Manage System
+# HairShop Management System
+
+
+
 
 2020-2 KHU DATABASE Project
 
+
+
+
 Node.js, MySQL
+
+
+
 
 
 
 ER Model
 
 ![ERmodel_최종](https://user-images.githubusercontent.com/64248143/101359262-5d5a6600-38df-11eb-9fe1-279ed9ff1e46.png)
+
+
+
 
 
 
