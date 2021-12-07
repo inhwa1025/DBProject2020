@@ -6,6 +6,8 @@
 ## 2020-2 KHU DATABASE Project
 
 
+![dbproj](https://user-images.githubusercontent.com/64248143/145075450-50128c6e-c2f3-42e4-a32d-cab0312fbd51.JPG)
+
 
 ### 사용언어
 
